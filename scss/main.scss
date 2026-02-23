@@ -132,26 +132,33 @@ p.tagline {
     margin-bottom: 1.5rem;
 }
 a.contact-info-bold {
-    display: block;
     font-weight: 700;
-    display: flex;
-    align-items: center;
     text-transform: none;
-    color: black;
+    margin: 0 0 3rem 2rem;
+    text-decoration: none;
+    font-size: 18px;
 }
-.contact-info-bold svg {
-    display: inline;
-    margin-right: 0.75rem;
-    width: 20px;
+.contact-info-bold:last-of-type{
+       display: inline-block;
+           border-bottom: 1px solid;
+           &:hover {
+            border-bottom: 2px solid;
+           }
 }
+
 .contact-info-bold svg {
     color: $text;
     font-weight: 400;
 }
 .contact-pre-title {
     text-transform: uppercase;
-    color: $accent;
-    margin-bottom: 1.5rem;
+}
+.contact-pre-title svg {
+    display: inline;
+    margin-right: 0.75rem;
+    width: 20px;
+    position: relative;
+    top: .375rem;
 }
 
 
@@ -171,11 +178,7 @@ a.contact-info-bold {
     justify-content: space-between;
 }
 
-// .logo svg {
-//     height: 50px;
-//     width: auto;
-//     display: block;
-// }
+
 .logo {
     font-size: 24px;
     text-decoration: none;
