@@ -1,0 +1,306 @@
+// Colours
+$black: #111111;
+$text: #585858;
+$muted: #6b7280;
+$bg-light: #f5f5f5;
+$bg-soft: #fafafa;
+$accent: #2f2f2f; // dark neutral instead of bright blue
+$brickRed: #db865e;
+
+// Layout
+$max-width: 1100px;
+$radius: 4px;
+
+/* ----------------------------
+   Modern CSS Reset
+----------------------------- */
+
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Allow percentage-based heights */
+html,
+body {
+    height: 100%;
+}
+
+/* 4. Improve text rendering */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    color: $text;
+    background-color: #fff;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Remove list styles (only if you're styling them yourself) */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    padding: 0;
+}
+
+/* 9. Smooth scrolling (optional) */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    color: $text;
+    background: white;
+}
+
+.container {
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+// h1, h2, h3 {
+//   margin-bottom: 1rem;
+// }
+
+.hero {
+    padding: 6rem 0 4rem;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+a {
+    color: $black;
+    position: relative;
+}
+
+p.pre-title {
+    text-transform: uppercase;
+    color: $muted;
+}
+p.tagline {
+    margin-bottom: 1.5rem;
+}
+a.contact-info-bold {
+    display: block;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+}
+.contact-info-bold svg {
+    display: inline;
+    margin-right: 0.75rem;
+    width: 20px;
+}
+.contact-pre-title {
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+.site-header {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo svg {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-grid,
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+.btn-primary {
+    background: $black;
+    color: white;
+    padding: 0.85rem 1.4rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: $radius;
+    transition: background 0.2s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    border: 1px solid $black;
+    color: $black;
+    padding: 0.85rem 1.4rem;
+    text-decoration: none;
+    border-radius: $radius;
+    transition: all 0.2s ease;
+    align-items: flex-end;
+    display: flex;
+}
+
+.btn-secondary:hover {
+    background: $black;
+    color: white;
+}
+.btn-secondary svg {
+    display: inline;
+    margin-right: 0.75rem;
+    width: 20px;
+}
+
+.card {
+    padding: 1.5rem;
+    background: $bg-light;
+}
+.card svg {
+    width: 36px;
+    height: 36px;
+    stroke-width: 1.5;
+    margin-bottom: 1rem;
+    color: $brickRed;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form.contact {
+    background-color: $bg-light;
+    padding: 2rem;
+}
+
+input,
+textarea {
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: $radius;
+    font-size: 1rem;
+    font-family: inherit;
+    background: white;
+    transition: border 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: $black;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
