@@ -123,7 +123,9 @@ a {
     color: $text;
     position: relative;
 }
-
+.about p {
+    margin-bottom: 24px;
+}
 p.pre-title {
     text-transform: uppercase;
     color: $muted;

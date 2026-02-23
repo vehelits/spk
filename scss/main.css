@@ -111,6 +111,10 @@ a {
   position: relative;
 }
 
+.about p {
+  margin-bottom: 24px;
+}
+
 p.pre-title {
   text-transform: uppercase;
   color: #6b7280;
