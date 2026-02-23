@@ -22,6 +22,10 @@
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="scss/main.css" />
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -32,37 +36,11 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
-        <?xml version="1.0" encoding="UTF-8"?>
-        <svg width="520" height="140" viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg">
-
-          <!-- Brick Icon (Flush Left) -->
-          <g fill="#585858">
-            <!-- Top row -->
-            <rect x="0" y="10" width="30" height="20" rx="2" />
-            <rect x="40" y="10" width="60" height="20" rx="2" />
-            <rect x="110" y="10" width="30" height="20" rx="2" />
-
-            <!-- Middle row -->
-            <rect x="0" y="45" width="70" height="25" rx="3" />
-            <rect x="80" y="45" width="80" height="25" rx="3" />
-
-            <!-- Bottom row -->
-            <rect x="0" y="85" width="30" height="20" rx="2" />
-            <rect x="40" y="85" width="60" height="20" rx="2" />
-            <rect x="110" y="85" width="30" height="20" rx="2" />
-          </g>
-
-          <!-- Brand Text -->
-          <text x="180" y="72" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="42" fill="#1F2A33"
-            alignment-baseline="middle">
-
-            <tspan font-weight="800" fill="#1F2A33">SPK</tspan>
-            <tspan font-weight="500" font-size="38" dx="8" fill="#db865e">Brickwork</tspan>
-
-          </text>
-
-        </svg>
+      <a href="/" class="logo-wrapper">
+        <div class="logo">
+          <p class="logo-text-spk">SPK</p> 
+          <p class="logo-text-brickwork">BRICKWORK</p>
+        </div>
       </a>
 
       <a href="tel:+447700900123" class="btn-secondary"><i data-lucide="phone"></i>Call Now</a>
@@ -160,17 +138,11 @@
       <div class="contact-info">
         <p class="pre-title">Get in touch</p>
         <h2>Let's discuss your next project.</h2>
-        <p class="contact-pre-title">Call:
+        <p class="contact-pre-title">Call
           <a class="contact-info-bold" href="tel:+447700900123"><i data-lucide="phone"></i>07700 900 123</a>
         </p>
-        <p class="contact-pre-title">Email:<a class="contact-info-bold" href="mailto:contact@spkbrickwork.com"> <i
+        <p class="contact-pre-title">Email<a class="contact-info-bold" href="mailto:contact@spkbrickwork.com"> <i
               data-lucide="inbox"></i>contact@spkbrickwork.com</a></p>
-
-        <div class="socials">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
-          <a href="#">Checkatrade</a>
-        </div>
       </div>
 
       <form name="contact" class="contact" method="POST" data-netlify="true">
@@ -182,11 +154,21 @@
 
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
+<!-- 
+      <div class="socials">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Checkatrade</a>
+      </div> -->
     </div>
   </section>
 
   <footer>
     <div class="container">
+      <div class="logo">
+          <p class="logo-text-spk">SPK</p> 
+          <p class="logo-text-brickwork">BRICKWORK</p>
+        </div>
       <p>© 2026 SPK Brickwork. All rights reserved.</p>
     </div>
   </footer>
