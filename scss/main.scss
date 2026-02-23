@@ -132,9 +132,10 @@ p.tagline {
     margin-bottom: 1.5rem;
 }
 a.contact-info-bold {
+    display: block;
     font-weight: 700;
     text-transform: none;
-    margin: 0 0 3rem 2rem;
+    margin: 0 0 2rem 2rem;
     text-decoration: none;
     font-size: 18px;
 }
