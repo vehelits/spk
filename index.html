@@ -156,15 +156,18 @@
         <a class="contact-info-bold" href="mailto:contact@spkbrickwork.com">contact@spkbrickwork.com</a>
       </div>
 
-      <form name="contact" class="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
+      <form name="contact" class="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contact">
+  <p hidden>
+    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+  </p>
 
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Tell us about your project..." required></textarea>
 
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
+  <button type="submit" class="btn-primary">Send Message</button>
+</form>
     </div>
   </section>
 
