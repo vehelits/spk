@@ -3,14 +3,14 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S36258F52G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S36258F52G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-S36258F52G');
-</script>
+    gtag('config', 'G-S36258F52G');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPK Brickwork | Bricklaying & Repointing in Upholland, Lancashire</title>
@@ -157,17 +157,17 @@
       </div>
 
       <form name="contact" class="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="contact">
-  <p hidden>
-    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-  </p>
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden>
+          <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+        </p>
 
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
 
-  <button type="submit" class="btn-primary">Send Message</button>
-</form>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
     </div>
   </section>
 
@@ -222,6 +222,48 @@
   <script>
     lucide.createIcons();
   </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function track(eventName, label) {
+    if (typeof gtag === "function") {
+      gtag("event", eventName, {
+        event_category: "engagement",
+        event_label: label
+      });
+    }
+  }
+
+  /* PHONE LINKS */
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener("click", function () {
+      track("phone_click", this.getAttribute("href"));
+    });
+  });
+
+  /* EMAIL LINKS */
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener("click", function () {
+      track("email_click", this.getAttribute("href"));
+    });
+  });
+
+  /* BUTTON CLICKS (Call Now / Get Quote etc) */
+  document.querySelectorAll("a.btn-primary, a.btn-secondary, button.btn-primary").forEach(button => {
+    button.addEventListener("click", function () {
+      track("button_click", this.innerText.trim());
+    });
+  });
+
+  /* FORM SUBMISSIONS */
+  document.querySelectorAll("form").forEach(form => {
+    form.addEventListener("submit", function () {
+      track("form_submit", this.getAttribute("name") || "contact_form");
+    });
+  });
+
+});
+</script>
 </body>
 
 </html>
