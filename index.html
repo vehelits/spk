@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPK Brickwork | Bricklaying & Repointing in Upholland, Lancashire</title>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S36258F52G"></script>
   <script>
@@ -10,11 +14,6 @@
     gtag('js', new Date());
     gtag('config', 'G-S36258F52G');
   </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>SPK Brickwork | Bricklaying & Repointing in Upholland, Lancashire</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
@@ -39,10 +38,9 @@
   <meta property="og:image:alt" content="SPK Brickwork professional bricklaying services">
   <meta property="og:url" content="https://spkbrickwork.com">
   <meta property="og:type" content="website">
-
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Google Fonts optimisation -->
+  <!-- Google Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" as="style"
@@ -56,9 +54,6 @@
   <noscript>
     <link rel="stylesheet" href="/scss/main.css">
   </noscript>
-
-  <!-- Lucide Icons -->
-  <script defer src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
@@ -200,27 +195,34 @@
         <p>© 2026 SPK Brickwork. All rights reserved.</p>
       </div>
     </footer>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "SPK Brickwork",
-  "image": "https://spkbrickwork.com/assets/images/og-image.jpg",
-  "telephone": "+447700900123",
-  "email": "contact@spkbrickwork.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Upholland",
-    "addressCountry": "UK"
-  },
-  "sameAs": [
-    "https://facebook.com/...",
-    "https://instagram.com/...",
-    "https://www.checkatrade.com/..."
-  ]
-}
-</script>
-    <script>
+  </main>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SPK Brickwork",
+    "image": "https://spkbrickwork.com/assets/images/og-image.jpg",
+    "telephone": "+447700900123",
+    "email": "contact@spkbrickwork.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Upholland",
+      "addressCountry": "UK"
+    },
+    "sameAs": [
+      "https://facebook.com/...",
+      "https://instagram.com/...",
+      "https://www.checkatrade.com/..."
+    ]
+  }
+  </script>
+
+  <!-- All JS deferred and DOM ready -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      /* GALLERY LIGHTBOX */
       document.querySelectorAll('.gallery-grid img').forEach(img => {
         img.addEventListener('click', () => {
           const overlay = document.createElement('div');
@@ -238,54 +240,43 @@
           document.body.appendChild(overlay);
         });
       });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
 
-        function track(eventName, label) {
-          if (typeof gtag === "function") {
-            gtag("event", eventName, {
-              event_category: "engagement",
-              event_label: label
-            });
-          }
+      /* ANALYTICS TRACKING */
+      function track(eventName, label) {
+        if (typeof gtag === "function") {
+          gtag("event", eventName, {
+            event_category: "engagement",
+            event_label: label
+          });
         }
+      }
 
-        /* PHONE LINKS */
-        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-          link.addEventListener("click", function () {
-            track("phone_click", this.getAttribute("href"));
-          });
-        });
-
-        /* EMAIL LINKS */
-        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-          link.addEventListener("click", function () {
-            track("email_click", this.getAttribute("href"));
-          });
-        });
-
-        /* BUTTON CLICKS (Call Now / Get Quote etc) */
-        document.querySelectorAll("a.btn-primary, a.btn-secondary, button.btn-primary").forEach(button => {
-          button.addEventListener("click", function () {
-            track("button_click", this.innerText.trim());
-          });
-        });
-
-        /* FORM SUBMISSIONS */
-        document.querySelectorAll("form").forEach(form => {
-          form.addEventListener("submit", function () {
-            track("form_submit", this.getAttribute("name") || "contact_form");
-          });
-        });
-
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener("click", function () { track("phone_click", this.href); });
       });
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
+
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener("click", function () { track("email_click", this.href); });
+      });
+
+      document.querySelectorAll("a.btn-primary, a.btn-secondary, button.btn-primary").forEach(button => {
+        button.addEventListener("click", function () { track("button_click", this.innerText.trim()); });
+      });
+
+      document.querySelectorAll("form").forEach(form => {
+        form.addEventListener("submit", function () { track("form_submit", form.name || "contact_form"); });
+      });
+
+    });
+  </script>
+
+  <!-- Lucide Icons (deferred) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
       lucide.createIcons();
-    </script>
-  </main>
+    });
+  </script>
 </body>
 
 </html>
