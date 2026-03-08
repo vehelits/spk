@@ -2,28 +2,34 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S36258F52G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-S36258F52G');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPK Brickwork | Bricklaying & Repointing in Upholland, Lancashire</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SPK Brickwork | Bricklaying & Repointing in Upholland, Lancashire</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <!-- SEO -->
   <meta name="description"
     content="Professional bricklaying and repointing in Upholland. 15+ years experience. Contact SPK Brickwork today for a free quote.">
-
   <meta name="keywords" content="bricklayer Upholland, repointing Upholland, brickwork specialist">
-
   <meta name="author" content="SPK Brickwork">
   <meta name="robots" content="index, follow">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="SPK Brickwork | Expert Bricklaying & Repointing">
   <meta property="og:description"
     content="Professional brickwork services with 15+ years experience. Get in touch for a free quote.">
@@ -35,152 +41,165 @@
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts optimisation -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
 
-  <link rel="stylesheet" href="scss/main.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  </noscript>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/scss/main.css">
+
+  <!-- Lucide Icons -->
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
 <body>
-<main>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo-wrapper">
+  <main>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo-wrapper">
+          <div class="logo">
+            <p class="logo-text-spk">SPK</p>
+            <p class="logo-text-brickwork">BRICKWORK</p>
+          </div>
+        </a>
+
+        <a href="tel:+447517087840" class="btn-secondary"><i data-lucide="phone"></i>Call Now</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Expert Brickwork & Repointing</h1>
+        <p class="tagline">Quality craftsmanship for heritage restorations and modern builds.</p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services container section-soft">
+      <h2>Services</h2>
+
+      <div class="grid">
+        <div class="card">
+          <i data-lucide="brick-wall"></i>
+          <h3>New build brickwork</h3>
+          <p>Professional brickwork built to last and finished to a high
+            standard.</p>
+        </div>
+
+        <div class="card">
+          <i data-lucide="cuboid"></i>
+          <h3>Bricklaying & structural work</h3>
+          <p>Structural brickwork, load-bearing walls, and alterations carried out safely and precisely.</p>
+        </div>
+
+        <div class="card">
+          <i data-lucide="mountain"></i>
+          <h3>Stonework & stone repairs</h3>
+          <p>Traditional and modern stonework, including repairs that restore strength and character.</p>
+        </div>
+
+        <div class="card">
+          <i data-lucide="grid-3x3"></i>
+          <h3>Repointing</h3>
+          <p>Careful removal and replacement of mortar to protect your property and improve appearance.</p>
+        </div>
+
+        <div class="card">
+          <i data-lucide="wrench"></i>
+          <h3>Restoration & Conservation</h3>
+          <p>Sensitive restoration work that preserves original features while reinforcing structural integrity.</p>
+        </div>
+
+        <div class="card">
+          <i data-lucide="sun"></i>
+          <h3>Patios & outdoor brickwork</h3>
+          <p>Durable patios, pathways, and garden brickwork designed to enhance your outdoor space.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about container">
+      <div class="about-grid">
+        <div>
+          <h2>Experienced, Local & Trusted</h2>
+          <p>Anthony is a bricklayer based in Upholland with over 15 years of hands-on experience. He specialises in
+            brickwork, repointing, and restoring older properties, helping homeowners protect and improve their
+            buildings.
+          </p>
+
+          <p>Whether it’s repairing tired mortar, matching brickwork on an extension, or restoring period features,
+            every
+            job is completed with care and attention to detail.</p>
+        </div>
+
+        <img src="assets/images/anthony3.jpg" alt="Anthony - SPK Brickwork">
+      </div>
+
+    </section>
+
+    <section class="gallery container">
+      <p class="pre-title">Portfolio</p>
+      <h2>Project gallery</h2>
+
+      <div class="gallery-grid">
+        <img src="assets/images/work1.jpg" alt="Brick wall installation">
+        <img src="assets/images/work2.jpg" alt="Repointing project">
+        <img src="assets/images/work3.jpg" alt="Chimney repair">
+        <img src="assets/images/work4.jpg" alt="Garden wall build">
+        <img src="assets/images/work5.jpg" alt="Heritage restoration">
+        <img src="assets/images/work6.jpg" alt="Brick extension">
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="pre-title">Get in touch</p>
+          <h2>Let's discuss your next project.</h2>
+          <p class="contact-pre-title"><i data-lucide="phone"></i>Call
+          </p>
+          <a class="contact-info-bold" href="tel:+447517087840">07517 087 840</a>
+          <p class="contact-pre-title"><i data-lucide="inbox"></i>Email</p>
+          <a class="contact-info-bold" href="mailto:contact@spkbrickwork.com">contact@spkbrickwork.com</a>
+        </div>
+
+        <form name="contact" class="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden>
+            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+          </p>
+
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
         <div class="logo">
           <p class="logo-text-spk">SPK</p>
           <p class="logo-text-brickwork">BRICKWORK</p>
         </div>
-      </a>
-
-      <a href="tel:+447517087840" class="btn-secondary"><i data-lucide="phone"></i>Call Now</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Expert Brickwork & Repointing</h1>
-      <p class="tagline">Quality craftsmanship for heritage restorations and modern builds.</p>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get a Quote</a>
+        <p>© 2026 SPK Brickwork. All rights reserved.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="services container section-soft">
-    <h2>Services</h2>
-
-    <div class="grid">
-      <div class="card">
-        <i data-lucide="brick-wall"></i>
-        <h3>New build brickwork</h3>
-        <p>Professional brickwork built to last and finished to a high
-          standard.</p>
-      </div>
-
-      <div class="card">
-        <i data-lucide="cuboid"></i>
-        <h3>Bricklaying & structural work</h3>
-        <p>Structural brickwork, load-bearing walls, and alterations carried out safely and precisely.</p>
-      </div>
-
-      <div class="card">
-        <i data-lucide="mountain"></i>
-        <h3>Stonework & stone repairs</h3>
-        <p>Traditional and modern stonework, including repairs that restore strength and character.</p>
-      </div>
-
-      <div class="card">
-        <i data-lucide="grid-3x3"></i>
-        <h3>Repointing</h3>
-        <p>Careful removal and replacement of mortar to protect your property and improve appearance.</p>
-      </div>
-
-      <div class="card">
-        <i data-lucide="wrench"></i>
-        <h3>Restoration & Conservation</h3>
-        <p>Sensitive restoration work that preserves original features while reinforcing structural integrity.</p>
-      </div>
-
-      <div class="card">
-        <i data-lucide="sun"></i>
-        <h3>Patios & outdoor brickwork</h3>
-        <p>Durable patios, pathways, and garden brickwork designed to enhance your outdoor space.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="about container">
-    <div class="about-grid">
-      <div>
-        <h2>Experienced, Local & Trusted</h2>
-        <p>Anthony is a bricklayer based in Upholland with over 15 years of hands-on experience. He specialises in
-          brickwork, repointing, and restoring older properties, helping homeowners protect and improve their buildings.
-        </p>
-
-        <p>Whether it’s repairing tired mortar, matching brickwork on an extension, or restoring period features, every
-          job is completed with care and attention to detail.</p>
-      </div>
-
-      <img src="assets/images/anthony3.jpg" alt="Anthony - SPK Brickwork">
-    </div>
-
-  </section>
-
-  <section class="gallery container">
-    <p class="pre-title">Portfolio</p>
-    <h2>Project gallery</h2>
-
-    <div class="gallery-grid">
-      <img src="assets/images/work1.jpg" alt="Brick wall installation">
-      <img src="assets/images/work2.jpg" alt="Repointing project">
-      <img src="assets/images/work3.jpg" alt="Chimney repair">
-      <img src="assets/images/work4.jpg" alt="Garden wall build">
-      <img src="assets/images/work5.jpg" alt="Heritage restoration">
-      <img src="assets/images/work6.jpg" alt="Brick extension">
-    </div>
-  </section>
-
-  <section id="contact" class="contact container">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p class="pre-title">Get in touch</p>
-        <h2>Let's discuss your next project.</h2>
-        <p class="contact-pre-title"><i data-lucide="phone"></i>Call
-        </p>
-        <a class="contact-info-bold" href="tel:+447517087840">07517 087 840</a>
-        <p class="contact-pre-title"><i data-lucide="inbox"></i>Email</p>
-        <a class="contact-info-bold" href="mailto:contact@spkbrickwork.com">contact@spkbrickwork.com</a>
-      </div>
-
-      <form name="contact" class="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p hidden>
-          <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-        </p>
-
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="logo">
-        <p class="logo-text-spk">SPK</p>
-        <p class="logo-text-brickwork">BRICKWORK</p>
-      </div>
-      <p>© 2026 SPK Brickwork. All rights reserved.</p>
-    </div>
-  </footer>
-  <script type="application/ld+json">
+    </footer>
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -200,71 +219,72 @@
   ]
 }
 </script>
-  <script>
-    document.querySelectorAll('.gallery-grid img').forEach(img => {
-      img.addEventListener('click', () => {
-        const overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.background = 'rgba(0,0,0,0.9)';
-        overlay.style.display = 'flex';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.innerHTML = `<img src="${img.src}" style="max-width:90%; max-height:90%">`;
-        overlay.onclick = () => overlay.remove();
-        document.body.appendChild(overlay);
+    <script>
+      document.querySelectorAll('.gallery-grid img').forEach(img => {
+        img.addEventListener('click', () => {
+          const overlay = document.createElement('div');
+          overlay.style.position = 'fixed';
+          overlay.style.top = 0;
+          overlay.style.left = 0;
+          overlay.style.width = '100%';
+          overlay.style.height = '100%';
+          overlay.style.background = 'rgba(0,0,0,0.9)';
+          overlay.style.display = 'flex';
+          overlay.style.alignItems = 'center';
+          overlay.style.justifyContent = 'center';
+          overlay.innerHTML = `<img src="${img.src}" style="max-width:90%; max-height:90%">`;
+          overlay.onclick = () => overlay.remove();
+          document.body.appendChild(overlay);
+        });
       });
-    });
-  </script>
-  <script>
-    lucide.createIcons();
-  </script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
 
-  function track(eventName, label) {
-    if (typeof gtag === "function") {
-      gtag("event", eventName, {
-        event_category: "engagement",
-        event_label: label
+        function track(eventName, label) {
+          if (typeof gtag === "function") {
+            gtag("event", eventName, {
+              event_category: "engagement",
+              event_label: label
+            });
+          }
+        }
+
+        /* PHONE LINKS */
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+          link.addEventListener("click", function () {
+            track("phone_click", this.getAttribute("href"));
+          });
+        });
+
+        /* EMAIL LINKS */
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+          link.addEventListener("click", function () {
+            track("email_click", this.getAttribute("href"));
+          });
+        });
+
+        /* BUTTON CLICKS (Call Now / Get Quote etc) */
+        document.querySelectorAll("a.btn-primary, a.btn-secondary, button.btn-primary").forEach(button => {
+          button.addEventListener("click", function () {
+            track("button_click", this.innerText.trim());
+          });
+        });
+
+        /* FORM SUBMISSIONS */
+        document.querySelectorAll("form").forEach(form => {
+          form.addEventListener("submit", function () {
+            track("form_submit", this.getAttribute("name") || "contact_form");
+          });
+        });
+
       });
-    }
-  }
-
-  /* PHONE LINKS */
-  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-    link.addEventListener("click", function () {
-      track("phone_click", this.getAttribute("href"));
-    });
-  });
-
-  /* EMAIL LINKS */
-  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-    link.addEventListener("click", function () {
-      track("email_click", this.getAttribute("href"));
-    });
-  });
-
-  /* BUTTON CLICKS (Call Now / Get Quote etc) */
-  document.querySelectorAll("a.btn-primary, a.btn-secondary, button.btn-primary").forEach(button => {
-    button.addEventListener("click", function () {
-      track("button_click", this.innerText.trim());
-    });
-  });
-
-  /* FORM SUBMISSIONS */
-  document.querySelectorAll("form").forEach(form => {
-    form.addEventListener("submit", function () {
-      track("form_submit", this.getAttribute("name") || "contact_form");
-    });
-  });
-
-});
-</script>
-</main>
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </main>
 </body>
 
 </html>
